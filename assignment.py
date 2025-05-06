@@ -4,7 +4,7 @@ def read_file(file_path: str) -> str:
     """
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
-            return file.read()
+            return open(file_path).read()
     raise NotImplementedError()
 
 
@@ -13,7 +13,7 @@ def write_file(file_path: str, content: str) -> None:
     Writes the given content to a file.
     """
         with open(file_path, 'w', encoding='utf-8') as file:
-        write_file(content)
+        return file.write(content)
     raise NotImplementedError()
 
 
