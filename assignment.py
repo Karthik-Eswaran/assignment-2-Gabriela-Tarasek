@@ -5,6 +5,7 @@ def read_file(file_path: str) -> str:
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             return file.read()
+    raise NotImplementedError()
 
 
 def write_file(file_path: str, content: str) -> None:
@@ -22,6 +23,7 @@ def list_files_in_directory(directory_path: str) -> list:
     """
     try:
         return [f for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))]
+    raise NotImplementedError()
 
 def generate_numbers(n: int) -> iter:
     """
@@ -41,3 +43,4 @@ def use_function_from_module(module_name: str, function_name: str, *args) -> any
         module = importlib.import_module(module_name)
         func = getattr(module, function_name)
         return func(*args)
+    raise NotImplementedError()
