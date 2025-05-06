@@ -2,15 +2,9 @@ def read_file(file_path: str) -> str:
     """
     Reads the contents of a file and returns it as a string.
     """
-       try:
+    try:
         with open(file_path, 'r', encoding='utf-8') as file:
             return file.read()
-    except FileNotFoundError:
-        print(f"The file at {file_path} was not found.")
-        return ""
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return ""
     raise NotImplementedError()
 
 
@@ -62,5 +56,3 @@ def use_function_from_module(module_name: str, function_name: str, *args) -> any
         print(f"Function '{function_name}' not found in module '{module_name}'.")
     except Exception as e:
         print(f"An error occurred: {e}")
-
-    raise NotImplementedError()
