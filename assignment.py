@@ -2,9 +2,9 @@ def read_file(file_path: str) -> str:
     """
     Reads the contents of a file and returns it as a string.
     """
-    try:
+   try:
         with open(file_path, 'r', encoding='utf-8') as file:
-            return open(file_path).read()
+            return file.read()
     raise NotImplementedError()
 
 
