@@ -26,7 +26,7 @@ def generate_numbers(n: int) -> iter:
     """
     Generates a sequence of numbers from 0 to n-1 using an iterator.
     """
-    yield from range(n)
+    return iter(range(n))
     raise NotImplementedError()
 
 
